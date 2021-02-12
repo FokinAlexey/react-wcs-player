@@ -1,9 +1,19 @@
 .card{
     display: flex;
     font-size: 14px;
+     
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+        margin: 10px;
+        
 }
-
-
+.player{
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+        margin: 10px;
+        height: 500px;
+}
+.descript, .title{
+    margin: 20px 10px;
+}
 .card img {
     width: 100px;
     height: 60px;
