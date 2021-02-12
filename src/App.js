@@ -6,7 +6,7 @@ import Player from './Components/Player';
 function App() {
   return (
     <div >
-      <h1> WCS Player</h1>
+      <h1> Wild-Code-School Player</h1>
       <div className="App">
         <Player />
         <CardList />

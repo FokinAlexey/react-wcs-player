@@ -3,7 +3,7 @@ import React from 'react';
 
 const Player = () => {
     return (
-        <ReactPlayer url='https://youtu.be/t10xCnzbitY' />
+        <ReactPlayer url='https://youtu.be/TdYUQ3gOrvQ' />
 
     );
 }
