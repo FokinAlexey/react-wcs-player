@@ -1,8 +1,9 @@
 import ReactPlayer from 'react-player/youtube';
-import React from 'react';
+import React, {Component} from 'react';
 
-const Player = () => {
-    return (
+class  Player extends Component{
+    render(){
+       return (
         <div className = "player"> 
               <ReactPlayer url='https://youtu.be/TdYUQ3gOrvQ' />
               <h2 className ="title"> F9 the fast saga</h2>
@@ -10,7 +11,9 @@ const Player = () => {
         </div>
       
 
-    );
+    ); 
+    }
+    
 }
 
 

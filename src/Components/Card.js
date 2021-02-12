@@ -1,16 +1,23 @@
 import '../main.css';
+import React, {Component} from 'react'
 
-const Card = (props) => {
-    return (
+class Card extends  Component {
+    constructor(props){
+        super(props)
+    }
+    render (){
+           return (
         <div className='card'>
-            <img src={props.imgUrl} alt='image' />
+            <img src={this.props.imgUrl} alt='image' />
             <div>
-                <h3>{props.title}</h3>
-                <p>{props.description}</p>
+                <h3>{this.props.title}</h3>
+                <p>{this.props.description}</p>
             </div>
 
         </div>
-    );
+    ); 
+    }
+
 }
 
 export default Card;
