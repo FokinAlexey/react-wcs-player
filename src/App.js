@@ -1,50 +1,44 @@
 // import Main from './Components/Main';
-import { Component } from 'react';
-import CardList from './Components/CardList';
-import Player from './Components/Player';
+import { Component } from "react";
+import CardList from "./Components/CardList";
+import Player from "./Components/Player";
 import SearchBar from "./Components/searchbar";
-import data from './Components/data';
-
+import data from "./Components/data";
 
 class App extends Component {
-  constructor(props) {
-    super(props)
+  constructor() {
+    super();
     this.state = {
-      tern: '',
-      title: props.title,
-    }
+      pickedMovie: null,
+    };
+
+    this.handleSetMovie2 = this.handleSetMovie.bind(this);
   }
 
-
-  search(items, tern) {
-    if (tern.length === 0) {
-      return items
-    }
-    items.filter((item) => {
-      return item.label.indexOf(tern) > -1
+  handleSetMovie(movieTitle) {
+    const findMovieByTitle = data.find((mov) => mov.title === movieTitle);
+    this.setState({
+      pickedMovie: findMovieByTitle,
     });
   }
 
   render() {
-    const { title, tern } = this.state
-    const visibleItems = this.search(title, tern);
+    const { pickedMovie } = this.state;
+    const handleSetMovie2 = this.handleSetMovie2;
 
-    // const filter = title.filter(element => element ==)
     return (
       <div>
         <h1> Wild-Code-School Player</h1>
         <SearchBar />
         <div className="App">
-          <Player />
-          <CardList />
+          <Player movie={pickedMovie} />
+          <CardList data={data} handleSetMovie={handleSetMovie2} />
         </div>
-
 
         {/* <Main /> */}
       </div>
     );
   }
-
 }
 
 export default App;
